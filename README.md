@@ -1,27 +1,20 @@
 # Developedbydude
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+DevelopedByDude is the personal blog website for TheProgrammerDude. This website is to basically upload articles and maybe video content as well. Let's see how far we can take this initiative.
 
-## Development server
+# Youtube Link
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+A sub to my Youtube channel would be huge, https://www.youtube.com/channel/UCWA7UTHFX13sJzTCfTjE2_w.
 
-## Code scaffolding
+# DevelopedByDude
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Check out the blog and other content on the website, https://developedbydude.web.app/home.
 
-## Build
+#screenshots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<img width="1440" alt="Screenshot 2022-10-23 at 13 43 17" src="https://user-images.githubusercontent.com/25347714/197381672-9d67bc44-90e0-49f6-a544-211c733b50fe.png">
+<img width="1440" alt="Screenshot 2022-10-23 at 13 43 30" src="https://user-images.githubusercontent.com/25347714/197381686-c4196d38-f788-47cf-a25f-e83ea0ea9911.png">
+<img width="1440" alt="Screenshot 2022-10-23 at 13 43 55" src="https://user-images.githubusercontent.com/25347714/197381711-18fb6a0f-040e-4109-b4ab-5a0c01533f15.png">
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Social Media
+ 🔗 Instagram - https://www.instagram.com/theprogrammerdude/
