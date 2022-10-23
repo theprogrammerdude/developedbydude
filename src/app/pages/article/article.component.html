@@ -1,0 +1,133 @@
+<div class="fixed inset-x-0 top-0 z-50" *ngIf="!isEditing">
+  <div
+    class="h-2 bg-blue-500"
+    [ngStyle]="{ width: scrollIndicator + '%' }"
+  ></div>
+</div>
+
+<app-navbar [isVisible]="true"></app-navbar>
+
+<div class="flex flex-col items-center justify-center my-5">
+  <img [src]="article.url" alt="" class="w-4/5 rounded-[10px]" />
+
+  <p
+    class="text-3xl font-bold mt-5 tracking-widest text-center"
+    *ngIf="!isEditing"
+  >
+    {{ article.title | uppercase }}
+  </p>
+
+  <div class="w-4/5 mt-5" *ngIf="isEditing">
+    <label
+      for="first_name"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+      >Article Title</label
+    >
+    <input
+      type="text"
+      id="first_name"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required
+      [(ngModel)]="article.title"
+    />
+  </div>
+
+  <div
+    class="flex flex-col md:flex-row items-center justify-between w-4/5 my-5"
+  >
+    <div class="flex items-center mb-5 md:mb-0">
+      <img
+        src="../../../assets/theprogrammerdude.jpeg"
+        class="mr-3 h-6 sm:h-9 rounded-full"
+        alt="DevelopedByDude Logo"
+      />
+      <p class="font-bold">{{ article.author }}</p>
+    </div>
+    <div>
+      <p class="text-xs">Posted At : {{ article.createdAt | date }}</p>
+      <p class="text-xs text-right">{{ article.body | readingTime }} read</p>
+    </div>
+  </div>
+
+  <p
+    class="font-bold mt-5 tracking-widest text-center w-4/5 my-5"
+    *ngIf="!isEditing"
+  >
+    {{ article.description }}
+  </p>
+
+  <div class="w-4/5 my-5" *ngIf="isEditing">
+    <label
+      for="first_name"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+      >Article Description</label
+    >
+    <input
+      type="text"
+      id="first_name"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required
+      [(ngModel)]="article.description"
+      maxlength="150"
+    />
+
+    <p
+      id="helper-text-explanation"
+      class="mt-2 text-sm text-gray-500 dark:text-gray-400"
+    >
+      {{ article.description.length }} / 150
+    </p>
+  </div>
+
+  <div [froalaView]="article.body" class="w-4/5 my-10" *ngIf="!isEditing"></div>
+
+  <div
+    class="w-4/5 my-10"
+    [froalaEditor]="options"
+    [(froalaModel)]="article.body"
+    *ngIf="isEditing"
+  ></div>
+
+  <div class="inline-flex rounded-md shadow-sm" role="group" *ngIf="uid">
+    <button
+      type="button"
+      class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-transparent rounded-l-lg border border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
+      (click)="edit()"
+      *ngIf="!isEditing"
+    >
+      <i class="fa-solid fa-pen-to-square mr-3"></i>
+      Edit
+    </button>
+
+    <button
+      type="button"
+      class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-transparent rounded-l-lg border border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
+      (click)="edit()"
+      *ngIf="isEditing"
+    >
+      <i class="fa-solid fa-xmark mr-3"></i>
+      Cancel
+    </button>
+
+    <button
+      type="button"
+      class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-transparent border-t border-b border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
+      (click)="update()"
+      *ngIf="isEditing"
+    >
+      <i class="fa-solid fa-pen mr-3"></i>
+      Update
+    </button>
+
+    <button
+      type="button"
+      class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-transparent rounded-r-md border border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
+      (click)="delete()"
+    >
+      <i class="fa-solid fa-trash mr-3"></i>
+      Delete
+    </button>
+  </div>
+</div>
+
+<app-footer></app-footer>
