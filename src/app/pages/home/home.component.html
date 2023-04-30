@@ -1,0 +1,164 @@
+<app-nav></app-nav>
+
+<div class="flex flex-col items-center justify-center">
+  <div
+    class="flex md:flex-row flex-col items-center justify-around md:my-32 my-10"
+  >
+    <div class="text-center md:w-3/5" [@slideInLeftOnEnter]>
+      <p>
+        <span class="text-xl font-bold">{{ data.info.name }}</span>
+        <br />
+        aka
+        <br />
+        <span class="text-xl font-bold">
+          &lt; {{ data.info.alias }} /&gt;
+        </span>
+      </p>
+
+      <div class="py-4"></div>
+
+      <p>
+        {{ data.content.head.intro }}
+      </p>
+      <br />
+      <p>{{ data.content.head.about }}</p>
+    </div>
+
+    <img
+      src="../../../assets/theprogrammerdude.jpeg"
+      alt=""
+      class="rounded-lg md:block hidden"
+      [@slideInRightOnEnter]
+    />
+  </div>
+
+  <app-heading [text]="'Skills'"></app-heading>
+
+  <div class="py-8 text-center md:w-3/5">
+    <p class="py-4">
+      {{ data.skills.heading }}
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center">
+      <div *ngFor="let skill of data.skills.tech" class="p-2 my-4">
+        <img
+          [src]="'../../../assets/' + skill + '.png'"
+          alt=""
+          class="md:h-16 h-12 hover:scale-125 transition ease-in-out rounded-md"
+        />
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center justify-center">
+      <div *ngFor="let os of data.os" class="p-2 my-4">
+        <img
+          [src]="'../../../assets/' + os + '.png'"
+          alt=""
+          class="md:h-16 h-12 hover:scale-125 transition ease-in-out rounded-md"
+        />
+      </div>
+    </div>
+
+    <p class="py-4">
+      {{ data.skills.base }}
+    </p>
+  </div>
+</div>
+
+<app-heading [text]="'Projects'"></app-heading>
+
+<div class="py-8 text-center w-screen md:px-16 px-4">
+  <div class="grid md:grid-cols-3 grid-cols-1 gap-4 m-auto">
+    <div
+      *ngFor="let project of data.projects"
+      class="flex flex-col items-center justify-center bg-gray-700 rounded-xl py-4 hover:scale-105 transition ease-in-out cursor-pointer"
+    >
+      <img
+        [src]="'../../../assets' + project.img"
+        alt="bg image"
+        class="h-24 object-contain"
+      />
+
+      <p class="text-xl">
+        {{ project.name | titlecase }}
+      </p>
+
+      <div class="flex items-center justify-center mx-4 flex-wrap">
+        <div *ngFor="let t of project.tech" class="p-2">
+          <p class="bg-blue-500 rounded-md px-2">
+            {{ t }}
+          </p>
+        </div>
+      </div>
+
+      <p class="text-gray-300 text-sm px-4">
+        {{ project.desc }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<app-heading [text]="'About me'"></app-heading>
+
+<div class="flex md:flex-row flex-col items-center justify-around w-screen">
+  <div class="w-5/6 flex flex-col items-center justify-center md:pl-8">
+    <p class="text-xl font-bold py-8">&lt; Reach out to Me /&gt;</p>
+
+    <div class="text-center mb-8">
+      <p>
+        Reach out to me to know more about my areas of work, or you can reach
+        out to me for work related queries.
+      </p>
+
+      <div class="py-4"></div>
+
+      <p>
+        I'm open to freelance work, related to weba nd app developed. The above
+        mentioned technologies are primarily used, other technologies used not
+        mentioned above are mostly packages or supporting tech.
+      </p>
+    </div>
+
+    <div class="py-2">
+      <fa-icon [icon]="email" class="md:fa-2xl fa-xl mr-4"></fa-icon>
+      <a [href]="'mailto:' + data.info.contact.email">
+        {{ data.info.contact.email }}
+      </a>
+    </div>
+
+    <div class="py-2 flex items-center justify-center">
+      <fa-icon [icon]="phone" class="md:fa-2xl fa-xl mr-4"></fa-icon>
+      <div class="flex flex-col">
+        <div *ngFor="let p of data.info.contact.phone">
+          <a [href]="'tel:+91' + p"> +91 {{ p }} </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-8 justify-around text-center md:px-16 px-4">
+    <ol
+      class="flex flex-col relative border-l border-gray-200 dark:border-gray-700 text-left"
+      *ngFor="let t of data.info.timeline"
+    >
+      <li class="mb-10 ml-4">
+        <div
+          class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+        ></div>
+        <time
+          class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+        >
+          {{ t.date }}
+        </time>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+          {{ t.title }}
+        </h3>
+        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+          {{ t.desc }}
+        </p>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<app-footer [links]="data.links"></app-footer>
+
+<app-stt></app-stt>

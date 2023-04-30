@@ -1,0 +1,38 @@
+<div class="flex items-center justify-center w-screen pb-8 pt-4">
+  <div *ngFor="let link of links | keyvalue" class="px-4">
+    <div [ngSwitch]="link.key">
+      <div
+        *ngSwitchCase="'github'"
+        class="hover:scale-150 transition ease-in-out"
+      >
+        <a [href]="link.value" target="_blank">
+          <fa-icon [icon]="github" class="md:fa-2xl fa-xl"></fa-icon>
+        </a>
+      </div>
+      <div
+        *ngSwitchCase="'youtube'"
+        class="hover:scale-150 transition ease-in-out"
+      >
+        <a [href]="link.value" target="_blank">
+          <fa-icon [icon]="youtube" class="md:fa-2xl fa-xl"></fa-icon>
+        </a>
+      </div>
+      <div
+        *ngSwitchCase="'instagram'"
+        class="hover:scale-150 transition ease-in-out"
+      >
+        <a [href]="link.value" target="_blank">
+          <fa-icon [icon]="instagram" class="md:fa-2xl fa-xl"></fa-icon>
+        </a>
+      </div>
+      <div
+        *ngSwitchCase="'linkedin'"
+        class="hover:scale-150 transition ease-in-out"
+      >
+        <a [href]="link.value" target="_blank">
+          <fa-icon [icon]="linkedin" class="md:fa-2xl fa-xl"></fa-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
