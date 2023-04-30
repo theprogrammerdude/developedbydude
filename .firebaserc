@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "developedbydude": {
+      "hosting": {
+        "developedbydude": [
+          "developedbydude"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "developedbydude"
+  }
+}
