@@ -24,4 +24,8 @@ export class HomeComponent implements OnInit {
       this.data = res;
     });
   }
+
+  openProject(url: string) {
+    window.open(url, '_blank');
+  }
 }

@@ -71,6 +71,7 @@
     <div
       *ngFor="let project of data.projects"
       class="flex flex-col items-center justify-center bg-gray-700 rounded-xl py-4 hover:scale-105 transition ease-in-out cursor-pointer"
+      (click)="openProject(project.url)"
     >
       <img
         [src]="'../../../assets' + project.img"
