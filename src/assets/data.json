@@ -4,13 +4,13 @@
     "alias": "TheProgrammerDude",
     "contact": {
       "email": "shashank.jaitly.98@gmail.com",
-      "phone": ["9990295204", "7011572830"]
+      "phone": ["9990295204"]
     },
     "timeline": [
       {
         "date": "2017",
         "title": "Started learning software development, especially wordpress",
-        "desc": "Wordpress was the first tech I learnt, as I wanted to develop my own website ton publish content."
+        "desc": "Wordpress was the first tech I learnt, as I wanted to develop my own website to publish content."
       },
       {
         "date": "2018",
@@ -26,6 +26,16 @@
         "date": "2021",
         "title": "Crypto Trading Platform",
         "desc": "It was the time when I single handedly developed, and published an application on both Play Store and App Store."
+      },
+      {
+        "date": "2023",
+        "title": "Technical Leader @ Monocept",
+        "desc": "I started working as a Technical Leader at Monocept Consultancy Pvt Ltd on Care Health Insurance projects, namely, faveo+ and InstaBiz."
+      },
+      {
+        "date": "2024",
+        "title": "Software Dev @ CUR8",
+        "desc": "I started working as Angular and Ionic Sr. dev and Lead at CUR8."
       }
     ]
   },
@@ -51,6 +61,13 @@
   },
   "os": ["android", "apple", "linux"],
   "projects": [
+    {
+      "url": "",
+      "name": "Faveo+ & Instabiz",
+      "img": "/chi.jpg",
+      "desc": "Worked as a Technical leader for Care Health Insurance for Faveo+ and InstaBiz applications on both android and ios.",
+      "tech": ["android", "ios", "react native"]
+    },
     {
       "url": "https://futuretradeonline.com/home",
       "name": "future trade",
