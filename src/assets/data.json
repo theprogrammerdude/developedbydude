@@ -31,11 +31,6 @@
         "date": "2023",
         "title": "Technical Leader @ Monocept",
         "desc": "I started working as a Technical Leader at Monocept Consultancy Pvt Ltd on Care Health Insurance projects, namely, faveo+ and InstaBiz."
-      },
-      {
-        "date": "2024",
-        "title": "Software Dev @ CUR8",
-        "desc": "I started working as Angular and Ionic Sr. dev and Lead at CUR8."
       }
     ]
   },
@@ -62,11 +57,18 @@
   "os": ["android", "apple", "linux"],
   "projects": [
     {
-      "url": "",
+      "url": "https://www.careinsurance.com/",
       "name": "Faveo+ & Instabiz",
       "img": "/chi.jpg",
       "desc": "Worked as a Technical leader for Care Health Insurance for Faveo+ and InstaBiz applications on both android and ios.",
       "tech": ["android", "ios", "react native"]
+    },
+    {
+      "url": "https://www.cur8.in/",
+      "name": "Transform+",
+      "img": "/cur8.png",
+      "desc": "Developed and Released the official app for Transform+, a Cur8 product on both android and ios platforms.",
+      "tech": ["ionic", "angular", "moodle", "node.js"]
     },
     {
       "url": "https://futuretradeonline.com/home",
