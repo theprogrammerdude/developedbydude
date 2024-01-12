@@ -4,8 +4,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { environment } from 'src/environments/environment';
+
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -13,6 +20,11 @@ import { NavComponent } from './components/nav/nav.component';
 import { HeadingComponent } from './components/heading/heading.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SttComponent } from './components/stt/stt.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AddComponent } from './pages/add/add.component';
+import { QuillModule } from 'ngx-quill';
+import { BlogComponent } from './pages/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +34,10 @@ import { SttComponent } from './components/stt/stt.component';
     HeadingComponent,
     FooterComponent,
     SttComponent,
+    BlogsComponent,
+    LoginComponent,
+    AddComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +45,26 @@ import { SttComponent } from './components/stt/stt.component';
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
+    FormsModule,
+    QuillModule.forRoot({
+      customOptions: [
+        {
+          import: 'formats/font',
+          whitelist: [
+            'mirza',
+            'roboto',
+            'aref',
+            'serif',
+            'sansserif',
+            'monospace',
+          ],
+        },
+      ],
+    }),
+    provideFirebaseApp(() => initializeApp(environment.config)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
   ],
   providers: [],
   bootstrap: [AppComponent],

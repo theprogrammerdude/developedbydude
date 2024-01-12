@@ -1,12 +1,51 @@
 <nav class="bg-gray-900">
   <div class="flex items-center justify-between p-5">
-    <p class="md:text-xl font-bold">&lt; DevelopedByDude /&gt;</p>
-    <a href="../../../assets/resume.pdf" download>
-      <button
-        class="bg-blue-500 py-2 px-4 rounded-lg hover:scale-110 transition ease-in-out"
+    <p class="md:text-xl font-bold text-xs cursor-pointer">
+      &lt; DevelopedByDude /&gt;
+    </p>
+
+    <div class="flex item-center justify-center">
+      <p
+        class="mr-5 py-2 px-4 font-bold md:text-sm text-xs hover:scale-110 transition ease-in-out cursor-pointer"
+        [routerLink]="['/blogs']"
+        routerLinkActive="router-link-active"
       >
-        Download CV
-      </button>
-    </a>
+        < blogs />
+      </p>
+
+      <a href="../../../assets/resume.pdf" download class="mr-5">
+        <button
+          class="bg-blue-500 py-2 px-4 rounded-lg hover:scale-110 transition ease-in-out md:text-sm text-xs"
+        >
+          Download CV
+        </button>
+      </a>
+
+      <a
+        [routerLink]="['/login']"
+        routerLinkActive="router-link-active"
+        *ngIf="!user"
+      >
+        <button
+          type="button"
+          class="bg-gray-800 py-2 px-4 rounded-lg hover:scale-110 transition ease-in-out md:text-sm text-xs"
+        >
+          Login
+        </button>
+      </a>
+
+      <a
+        [routerLink]="['/add']"
+        routerLinkActive="router-link-active"
+        *ngIf="user"
+      >
+        <button
+          type="button"
+          class="bg-gray-800 py-2 px-4 rounded-lg hover:scale-110 transition ease-in-out md:text-sm text-xs"
+        >
+          Add Article
+        </button>
+      </a>
+    </div>
   </div>
 </nav>

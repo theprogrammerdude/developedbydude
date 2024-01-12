@@ -1,0 +1,120 @@
+<div
+  class="absolute bg-white bg-opacity-60 z-10 h-full w-full flex items-center justify-center overflow-y-hidden"
+  *ngIf="isloading"
+>
+  <div class="flex items-center">
+    <span class="text-3xl mr-4">Loading</span>
+    <svg
+      class="animate-spin h-8 w-8 text-gray-800"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <circle
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4"
+      ></circle>
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+  </div>
+</div>
+
+<nav class="bg-gray-900">
+  <div class="flex items-center justify-between p-5">
+    <p
+      class="md:text-xl font-bold cursor-pointer"
+      [routerLink]="['/']"
+      routerLinkActive="router-link-active"
+    >
+      &lt; DevelopedByDude /&gt;
+    </p>
+
+    <button
+      class="bg-blue-500 py-2 px-4 rounded-lg hover:scale-110 transition ease-in-out mr-5 md:text-sm text-xs"
+      (click)="publish()"
+    >
+      Publish
+    </button>
+  </div>
+</nav>
+
+<div
+  class="flex flex-col items-center justify-center pb-10 w-screen"
+  *ngIf="!isloading"
+>
+  <div class="flex flex-col md:w-3/5 w-11/12 items-center justify-center">
+    <img
+      [src]="imgUrl"
+      alt=""
+      class="mb-2 rounded"
+      *ngIf="imgUrl !== ''"
+      (click)="imgUrl = ''"
+    />
+
+    <form class="w-full mb-5" *ngIf="imgUrl === ''">
+      <label for="file-input" class="sr-only">Choose file</label>
+      <input
+        type="file"
+        name="file-input"
+        id="file-input"
+        class="block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 file:border-0 file:bg-gray-100 file:me-4 file:py-3 file:px-4 dark:file:bg-gray-700 dark:file:text-gray-400"
+        accept=".png, .jpeg, .jpg"
+        (change)="getImg($event)"
+      />
+    </form>
+
+    <div class="flex flex-col items-center justify-between w-full mb-5">
+      <div class="w-full">
+        <p
+          class="text-4xl font-bold text-gray-500"
+          *ngIf="isEditingTitle === false"
+          (click)="isEditingTitle = true"
+        >
+          Title
+        </p>
+        <input
+          type="text"
+          class="bg-transparent text-4xl font-bold text-gray-500 border-none focus:outline-none placeholder-gray-500 w-full"
+          placeholder="Title"
+          [(ngModel)]="title"
+          *ngIf="isEditingTitle === true"
+          autofocus
+        />
+      </div>
+
+      <div class="w-full">
+        <p
+          class="text-2xl font-bold text-gray-500"
+          *ngIf="isEditingDescription === false"
+          (click)="isEditingDescription = true"
+        >
+          Description
+        </p>
+        <textarea
+          type="text"
+          class="bg-transparent text-2xl font-bold text-gray-500 border-none focus:outline-none placeholder-gray-500 w-full"
+          placeholder="Description"
+          [(ngModel)]="description"
+          *ngIf="isEditingDescription === true"
+          autofocus
+          rows="2"
+        ></textarea>
+      </div>
+    </div>
+
+    <quill-editor
+      [(ngModel)]="content"
+      class="bg-white text-black border-none w-full"
+      [styles]="{ 'min-height': '300px' }"
+      [maxLength]="3000"
+    ></quill-editor>
+  </div>
+</div>

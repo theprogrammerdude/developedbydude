@@ -1,0 +1,34 @@
+<app-nav></app-nav>
+
+<div class="py-8 text-center w-screen md:px-16 px-4">
+  <div class="grid md:grid-cols-3 grid-cols-1 gap-4 m-auto">
+    <div
+      *ngFor="let article of articles"
+      class="flex flex-col items-center justify-center bg-gray-700 rounded-xl py-4 hover:scale-105 transition ease-in-out cursor-pointer"
+      [routerLink]="['/blog/' + article.id]"
+      routerLinkActive="router-link-active"
+    >
+      <img
+        [src]="article.url"
+        alt="bg image"
+        class="w-11/12 object-contain mb-3 rounded"
+      />
+
+      <p class="text-xl">
+        {{ article.title | titlecase }}
+      </p>
+
+      <p class="text-gray-300 text-sm px-4">
+        {{ article.description }}
+      </p>
+
+      <div class="flex items-center justify-between w-11/12 text-sm">
+        <p>
+          {{ article.createdAt | date }}
+        </p>
+
+        <p>{{ calculateReadTime(article.content) }} min</p>
+      </div>
+    </div>
+  </div>
+</div>

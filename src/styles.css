@@ -4,6 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~quill/dist/quill.snow.css";
+
 * {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
 }
