@@ -6,6 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AddComponent } from './pages/add/add.component';
 import { AuthGuard } from './guards/auth.guard';
 import { BlogComponent } from './pages/blog/blog.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
     path: 'add',
     component: AddComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
 

@@ -17,6 +17,7 @@ export class LoginComponent {
     if (this.email !== '' && this.password !== '')
       this.auth.loginWithEmail(this.email, this.password).then((res) => {
         this.router.navigate(['']);
+        localStorage.setItem('uid', res.user.uid);
       });
   }
 }

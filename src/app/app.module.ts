@@ -25,6 +25,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { AddComponent } from './pages/add/add.component';
 import { QuillModule } from 'ngx-quill';
 import { BlogComponent } from './pages/blog/blog.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { BlogComponent } from './pages/blog/blog.component';
     LoginComponent,
     AddComponent,
     BlogComponent,
+    AvatarComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
