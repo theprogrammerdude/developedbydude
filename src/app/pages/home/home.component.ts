@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { JsonService } from 'src/app/services/json.service';
 import { faMessage, faPhone } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -13,6 +13,8 @@ import {
   animations: [slideInLeftOnEnterAnimation(), slideInRightOnEnterAnimation()],
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('videoPlayer') videoplayer?: ElementRef;
+
   data: any = {};
   email = faMessage;
   phone = faPhone;
@@ -27,5 +29,9 @@ export class HomeComponent implements OnInit {
 
   openProject(url: string) {
     window.open(url, '_blank');
+  }
+
+  toggleVideo(event: any) {
+    this.videoplayer!.nativeElement.play();
   }
 }

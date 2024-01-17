@@ -32,6 +32,17 @@
     />
   </div>
 
+  <div class="w-11/12 md:mb-32 mb-10">
+    <video
+      controls
+      (click)="toggleVideo($event)"
+      #videoPlayer
+      class="rounded-lg md:h-[500px] mx-auto"
+    >
+      <source src="../../../assets/intro.mp4" type="video/mp4" />
+    </video>
+  </div>
+
   <app-heading [text]="'Skills'"></app-heading>
 
   <div class="py-8 text-center md:w-3/5">

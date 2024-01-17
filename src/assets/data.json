@@ -64,6 +64,13 @@
       "tech": ["android", "ios", "react native"]
     },
     {
+      "url": "https://thehen.io/",
+      "name": "The Hen",
+      "img": "/thehen.png",
+      "desc": "The Hen is a home schooling platform, based in UK. I was responsible for their android and ios applications made using flutter and firebase.",
+      "tech": ["flutter", "firebase"]
+    },
+    {
       "url": "https://www.cur8.in/",
       "name": "Transform+",
       "img": "/cur8.png",

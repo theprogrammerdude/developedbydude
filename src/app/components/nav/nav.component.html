@@ -145,7 +145,12 @@
           < add articles />
         </p>
 
-        <a href="../../../assets/resume.pdf" download class="mr-3 md:mt-0 mt-1">
+        <a
+          href="../../../assets/resume.pdf"
+          download
+          class="mr-3 md:mt-0 mt-1"
+          *ngIf="deviceType === 'mobile'"
+        >
           <button
             class="bg-blue-500 py-2 px-4 rounded-lg hover:scale-110 transition ease-in-out md:text-sm text-xs"
           >
