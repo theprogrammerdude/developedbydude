@@ -131,7 +131,7 @@
           class="mr-5 py-2 px-4 font-bold md:text-sm text-xs hover:scale-110 transition ease-in-out cursor-pointer"
           [routerLink]="['/login']"
           routerLinkActive="router-link-active"
-          *ngIf="!uid"
+          *ngIf="!uid && deviceType === 'mobile'"
         >
           < login />
         </p>
