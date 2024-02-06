@@ -78,10 +78,17 @@
       "tech": ["ionic", "angular", "moodle", "node.js"]
     },
     {
-      "url": "https://futuretradeonline.com/home",
-      "name": "future trade",
-      "img": "/future_trade.png",
-      "desc": "A landing page and official website for Future Trade, stock broking firm in New Delhi, India.",
+      "url": "https://www.cur8.in/",
+      "name": "Transform+",
+      "img": "/cur8.png",
+      "desc": "Developed and Released the official app for Transform+, a Cur8 product on both android and ios platforms.",
+      "tech": ["ionic", "angular", "moodle", "node.js"]
+    },
+    {
+      "url": "https://wthrio.web.app/",
+      "name": "weather.io",
+      "img": "/weather.png",
+      "desc": "Weather PWA built using OpenWeather API.",
       "tech": ["angular", "tailwind", "firebase"]
     },
     {
