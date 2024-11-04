@@ -14,7 +14,7 @@ export const siteConfig = {
   timeline: [
     {
       date: "2016",
-      title: "College Dunia",
+      title: "College Search",
       subtitle: "Content Developer",
       desc: "I was responsible for generating reviews and updating them over to their website.",
     },
