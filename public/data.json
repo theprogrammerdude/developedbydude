@@ -1,0 +1,129 @@
+{
+  "info": {
+    "name": "Shashank Jaitly",
+    "alias": "TheProgrammerDude",
+    "contact": {
+      "email": "shashank.jaitly.98@gmail.com",
+      "phone": ["9990295204"]
+    },
+    "timeline": [
+      {
+        "date": "2017",
+        "title": "Started learning software development, especially wordpress",
+        "desc": "Wordpress was the first tech I learnt, as I wanted to develop my own website to publish content."
+      },
+      {
+        "date": "2018",
+        "title": "HTML, CSS and JS",
+        "desc": "Took a deep dive into web dev technologies with getting into HTML, CSS and JS."
+      },
+      {
+        "date": "2019",
+        "title": "Freelance Development",
+        "desc": "In mid 2019, started working as a freelance software developer, primarily focusing on wordpress websites ma dlater on took us applocation development."
+      },
+      {
+        "date": "2021",
+        "title": "Crypto Trading Platform",
+        "desc": "It was the time when I single handedly developed, and published an application on both Play Store and App Store."
+      },
+      {
+        "date": "2023",
+        "title": "Technical Leader @ Monocept",
+        "desc": "I started working as a Technical Leader at Monocept Consultancy Pvt Ltd on Care Health Insurance projects, namely, faveo+ and InstaBiz."
+      }
+    ]
+  },
+  "content": {
+    "head": {
+      "intro": "Hi, I'm Shashank, Software and Physics Enthusiast. I'm working both as a freelancer and full time in the software industry.",
+      "about": "I have a degree in Physics (B. Sc. Physics Hons.) from IGNOU, and started working in Software Development industry since I graduated from high school. I've started with basic wordpress websites 🖥️, and made my way to ReactJs in 2017. I started learning web development full fledged in 2016, starting with HTML, CSS and JS, slowly progressing up to JS frameworks and libraries."
+    }
+  },
+  "skills": {
+    "heading": "All of the mentioned skills and os are accumulated over time, learned and mastered on my own. I had no prior knowledge in any of the mentioned technologies, which makes me a Self Taught Programmer",
+    "base": "I'm proficient in the mentioned operating systems, and I've all of them available with me anytime.",
+    "tech": [
+      "angular",
+      "flutter",
+      "nuxt",
+      "firebase",
+      "node",
+      "mongodb",
+      "rethinkdb",
+      "aws"
+    ]
+  },
+  "os": ["android", "apple", "linux"],
+  "projects": [
+    {
+      "url": "https://www.careinsurance.com/",
+      "name": "Faveo+ & Instabiz",
+      "img": "/chi.jpg",
+      "desc": "Worked as a Technical leader for Care Health Insurance for Faveo+ and InstaBiz applications on both android and ios.",
+      "tech": ["android", "ios", "react native"]
+    },
+    {
+      "url": "https://thehen.io/",
+      "name": "The Hen",
+      "img": "/thehen.png",
+      "desc": "The Hen is a home schooling platform, based in UK. I was responsible for their android and ios applications made using flutter and firebase.",
+      "tech": ["flutter", "firebase"]
+    },
+    {
+      "url": "https://www.cur8.in/",
+      "name": "Transform+",
+      "img": "/cur8.png",
+      "desc": "Developed and Released the official app for Transform+, a Cur8 product on both android and ios platforms.",
+      "tech": ["ionic", "angular", "moodle", "node.js"]
+    },
+    {
+      "url": "https://www.cur8.in/",
+      "name": "Transform+",
+      "img": "/cur8.png",
+      "desc": "Developed and Released the official app for Transform+, a Cur8 product on both android and ios platforms.",
+      "tech": ["ionic", "angular", "moodle", "node.js"]
+    },
+    {
+      "url": "https://wthrio.web.app/",
+      "name": "weather.io",
+      "img": "/weather.png",
+      "desc": "Weather PWA built using OpenWeather API.",
+      "tech": ["angular", "tailwind", "firebase"]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.cftc.usd",
+      "name": "crypto future trade",
+      "img": "/bull.png",
+      "desc": "Crypto Future Trade is an online crytpocurrency trading platform, having an international userbase.",
+      "tech": ["flutter", "firebase"]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.theprogrammerdude.novac&hl=en_US&gl=US",
+      "name": "novac",
+      "img": "/novac.png",
+      "desc": "Novac is a daily budget tracker applications, made for everyone to organize their expenses.",
+      "tech": ["flutter", "firebase"]
+    },
+    {
+      "url": "https://blackjack-js-three.vercel.app/blackjack.html",
+      "name": "blackjack",
+      "img": "/blackjack.png",
+      "desc": "Balckjack game made to test out general technology skills made in absolute vanilla everthing.",
+      "tech": ["html", "css", "js"]
+    },
+    {
+      "url": "http://cartizoindia.com/",
+      "name": "cartizo india",
+      "img": "/cartizo.png",
+      "desc": "Cartizo India is an online marketplace, where sellers and buyers meet up, just like IndiaMart.",
+      "tech": ["wordpress"]
+    }
+  ],
+  "links": {
+    "youtube": "https://www.youtube.com/channel/UCWA7UTHFX13sJzTCfTjE2_w",
+    "linkedin": "https://www.linkedin.com/in/theprogrammerdude/",
+    "instagram": "https://www.instagram.com/theprogrammerdude/",
+    "github": "https://github.com/theprogrammerdude"
+  }
+}
